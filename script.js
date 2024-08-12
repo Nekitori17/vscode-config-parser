@@ -14,8 +14,8 @@ document.getElementById('generateButton').addEventListener('click', () => {
     const content = event.target.result;
     try {
       const data = JSON.parse(content);
-      const { settings } = JSON.parse(data.settings);
-      const parsedSettings = JSON.parse(settings);
+      const settings = JSON.parse(data.settings);
+      const parsedSettings = JSON.parse(settings.settings);
       const extensions = JSON.parse(data.extensions);
 
       let htmlContent = `<h2>Settings (Edited: ${Object.keys(parsedSettings).length})</h2>`;
